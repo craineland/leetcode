@@ -13,7 +13,7 @@ class Solution {
         
         int i;
         for (i = 0; i < s.length(); i++) {
-            // i>0 checks if index is past index 0
+            // i+1 < s.length() ensures iteration doesn't surpass string array end
             if (i+1 < s.length() && numeralMap.get(s.charAt(i)) < numeralMap.get(s.charAt(i+1))) {
                 total -= numeralMap.get(s.charAt(i));
             }
